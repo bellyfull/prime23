@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int num, temp, temp2;
+  int count2 = 0;
+  int count3 = 0;
+  cout <<"Enter a positive integer:" << endl;
+  cin >> num;
+
+  temp = num;
+  temp2 = num;
+  while (temp/2 != 0 and temp%2==0 and temp%5!=0) {
+    temp=temp/2;
+    count2++;
+  }
+
+  while (temp2/3 !=0 and temp2%3==0 and temp2%5!=0) {
+    temp2 = temp2/3;
+    count3++;
+  } 
+
+  if (count2>0 or count3>0) {
+    cout << "Yes" << endl;
+    cout << "Twos=" << count2 << " " << "Threes=" << count3;
+    }
+  else {
+    cout <<"No";
+  }
+
+
+}
